@@ -6,7 +6,7 @@
     from bs4 import BeautifulSoup
     import smtplib
 
-    //A webscrapper for an item prices on insertcoinclothing.com using the beautiful soup library.
+    #A webscrapper for an item prices on insertcoinclothing.com using the beautiful soup library.
 
     URLS = ('http://www.insertcoinclothing.com/hoodies/ryuji-777.html')
 
@@ -30,12 +30,12 @@
 
 
     def send_mail():
-        server = smtplib.SMTP('smtp.gmail.com', 587) //smtp mail and code go here. One can find them with a quick google search
+        server = smtplib.SMTP('smtp.gmail.com', 587) #smtp mail and code go here. One can find them with a quick google search
         server.ehlo()
         server.starttls()
         server.ehlo()
 
-    server.login('', '') //Place your email and email API key in the following quotes as server.login("Email", "API Key")
+    server.login('', '') #Place your email and email API key in the following quotes as server.login("Email", "API Key")
 
     subject = 'Price fell down for Ryuji Hoodie'
     body = 'Check the link https://www.insertcoinclothing.com/hoodies/ryuji-777.html'
