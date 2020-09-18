@@ -2,19 +2,19 @@
 
 //A beginner code using the beautiful soup library
 
-import requests
-from bs4 import BeautifulSoup
-import smtplib
+    import requests
+    from bs4 import BeautifulSoup
+    import smtplib
 
-//A webscrapper for an item prices on insertcoinclothing.com using the beautiful soup library.
+    //A webscrapper for an item prices on insertcoinclothing.com using the beautiful soup library.
 
-URLS = ('http://www.insertcoinclothing.com/hoodies/ryuji-777.html')
+    URLS = ('http://www.insertcoinclothing.com/hoodies/ryuji-777.html')
 
-headers = {'Insert the your user agent from the browser'}
+    headers = {'Insert the your user agent from the browser'}
 
 
-def check_price():
-    page = requests.get(URLS, headers=headers)
+    def check_price():
+        page = requests.get(URLS, headers=headers)
 
     soup = BeautifulSoup(page.content, 'lxml')
 
@@ -29,11 +29,11 @@ def check_price():
     print(title.strip())
 
 
-def send_mail():
-    server = smtplib.SMTP('smtp.gmail.com', 587) //smtp mail and code go here. One can find them with a quick google search
-    server.ehlo()
-    server.starttls()
-    server.ehlo()
+    def send_mail():
+        server = smtplib.SMTP('smtp.gmail.com', 587) //smtp mail and code go here. One can find them with a quick google search
+        server.ehlo()
+        server.starttls()
+        server.ehlo()
 
     server.login('', '') //Place your email and email API key in the following quotes as server.login("Email", "API Key")
 
@@ -52,6 +52,6 @@ def send_mail():
     server.quit()
 
 
-check_price()
+    check_price()
 
 
